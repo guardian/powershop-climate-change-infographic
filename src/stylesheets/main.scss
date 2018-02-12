@@ -1,0 +1,7 @@
+// https://github.com/iamstarkov/css-initials
+// https://github.com/lennym/npm-sass
+@import "css-initials/all.css";
+
+.s-interactive.s-interactive * {
+  @extend .initials-all;
+}

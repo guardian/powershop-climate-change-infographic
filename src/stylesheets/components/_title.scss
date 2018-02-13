@@ -1,9 +1,8 @@
 .c-title {
-  @include fluid-type(font-size, 320px, 1260px, 20px, 32px);
+  @include fluid-type(font-size, 20em, 63em, 1.25em, 1.5em);
   @include fluid-type(margin-bottom, 320px, 1260px, 32px, 40px);
   font-weight: 700;
   line-height: 1.25;
-  text-align: center;
 
   small {
     color: $abbey;
@@ -17,8 +16,6 @@
   color: $amaranth;
   counter-increment: title;
   display: flex;
-  justify-content: center;
-  text-align: left;
 
   &::before {
     background-color: $amaranth;

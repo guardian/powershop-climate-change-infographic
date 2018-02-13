@@ -28,59 +28,23 @@
 // Angles ------------------------------
 
 .c-main {
-  .c-section:nth-child(2) {
-    @include tilted(-10deg, $celery);
+  .c-section--tilted:nth-child(2) {
     @include tilted(-10deg, $celery);
   }
 
-  .c-section:nth-child(4) {
-    @include tilted(10deg, $jaffa);
+  .c-section--tilted:nth-child(4) {
     @include tilted(10deg, $jaffa);
   }
 
-  .c-section:nth-child(6) {
-    @include tilted(-10deg, $celery);
+  .c-section--tilted:nth-child(6) {
     @include tilted(-10deg, $celery);
   }
 
-  .c-section:nth-child(8) {
-    @include tilted(-10deg, $amaranth);
+  .c-section--tilted:nth-child(8) {
     @include tilted(-10deg, $amaranth);
   }
 
-  .c-section:nth-child(10) {
-    @include tilted(10deg, $iron);
+  .c-section--tilted:nth-child(10) {
     @include tilted(10deg, $iron);
   }
 }
-
-
-// Spacings ----------------------------
-
-.c-header {}
-
-.c-main {
-  .c-section:nth-child(1) {}
-
-  .c-section:nth-child(2) {}
-
-  .c-section:nth-child(3) {}
-
-  .c-section:nth-child(4) {}
-
-  .c-section:nth-child(5) {}
-
-  .c-section:nth-child(6) {}
-
-  .c-section:nth-child(7) {}
-
-  .c-section:nth-child(8) {}
-
-  .c-section:nth-child(9) {}
-
-  .c-section:nth-child(10) {}
-
-  .c-section:nth-child(11) {}
-}
-
-.c-footer {}

@@ -2,6 +2,11 @@
   hyphens: auto;
   word-wrap: break-word;
 
+  small {
+    display: block;
+    font-style: italic;
+  }
+
   p {
     margin-bottom: 1.5em;
     margin-top: 1.5em;
@@ -14,13 +19,8 @@
       margin-bottom: 0;
     }
   }
-
-  small {
-    display: block;
-    font-style: italic;
-  }
 }
 
-.s-entry-content--center {
+.s-entry-content--centered {
   text-align: center;
 }

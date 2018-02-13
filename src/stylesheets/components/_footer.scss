@@ -1,0 +1,8 @@
+.c-footer {
+  @extend .c-section;
+}
+
+.c-footer__container {
+  border-top: rgba($abbey, 0.5) solid 1px;
+  padding-top: inherit;
+}

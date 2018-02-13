@@ -1,4 +1,4 @@
-# Australian Ethical – Invest for a Better World
+# Powershop – Climate Change (Infographic)
 
 ## Development
 

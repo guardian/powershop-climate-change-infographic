@@ -1,0 +1,35 @@
+.c-title {
+  @include fluid-type(font-size, 320px, 1260px, 20px, 32px);
+  @include fluid-type(margin-bottom, 320px, 1260px, 32px, 40px);
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+
+  small {
+    color: $abbey;
+    display: block;
+    font-size: 0.5em;
+  }
+}
+
+.c-title--counter {
+  align-items: center;
+  color: $amaranth;
+  counter-increment: title;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+
+  &::before {
+    background-color: $amaranth;
+    border-radius: 50%;
+    color: $white;
+    content: counter(title);
+    flex: none;
+    font-size: 1.5em;
+    line-height: 1.6666666667;
+    margin-right: 0.3333333333em;
+    text-align: center;
+    width: 1.6666666667em;
+  }
+}

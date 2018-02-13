@@ -11,7 +11,6 @@
     "gulp-htmlmin": "^4.0.0",
     "gulp-nunjucks": "^3.1.1",
     "gulp-plumber": "^1.2.0",
-    "gulp-remove-code": "^1.0.2",
     "gulp-rename": "^1.2.2",
     "gulp-s3-upload": "^1.7.0",
     "gulp-sass": "^3.1.0",
@@ -19,11 +18,11 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-surge": "^0.1.0",
     "gulp-uglify": "^3.0.0",
+    "mathsass": "^0.10.1",
     "npm-sass": "^2.2.1",
     "run-sequence": "^2.2.1"
   },
   "dependencies": {
-    "css-initials": "^0.2.0",
     "when-in-viewport": "^2.0.3"
   },
   "scripts": {

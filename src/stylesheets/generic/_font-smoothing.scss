@@ -1,0 +1,9 @@
+& {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  @media (min-resolution: 192dpi) {
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: auto;
+  }
+}

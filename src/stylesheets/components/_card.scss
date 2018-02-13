@@ -1,0 +1,36 @@
+.c-card {
+  margin: -2em 0 0 -2em;
+
+  @media (min-width: 48em) {
+    display: flex;
+  }
+}
+
+.c-card__cover {
+  padding: 2em 0 0 2em;
+
+  @media (min-width: 48em) {
+    flex-basis: 40%;
+  }
+}
+
+.c-card__content {
+  padding: 2em 0 0 2em;
+
+  @media (min-width: 48em) {
+    flex-basis: 60%;
+  }
+}
+
+
+
+
+/*
+
+<div class="c-card">
+  <div class="c-card__cover"></div>
+  <div class="c-card__content"></div>
+</div>
+<!-- /c-card -->
+
+*/

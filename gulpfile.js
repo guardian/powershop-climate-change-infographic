@@ -10,7 +10,6 @@ const htmlmin = require('gulp-htmlmin')
 const npmSass = require('npm-sass')
 const nunjucks = require('gulp-nunjucks')
 const plumber = require('gulp-plumber')
-const removeCode = require('gulp-remove-code')
 const rename = require('gulp-rename')
 const runSequence = require('run-sequence')
 const s3Upload = require('gulp-s3-upload')
@@ -95,16 +94,12 @@ gulp.task('stage', ['build'], () =>
   })
 )
 
-gulp.task('stylesheets', () => {
-  const variables = {
-    cdn: cdn
-  }
-
+gulp.task('stylesheets', () =>
   gulp.src('src/stylesheets/*.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())
-      .pipe(sassVars(variables, {
-        verbose: true
+      .pipe(sassVars({
+        cdn: cdn
       }))
       .pipe(sass({
         importer: npmSass.importer,
@@ -117,7 +112,6 @@ gulp.task('stylesheets', () => {
     .pipe(browserSync.stream({
       match: '**/*.css'
     }))
-  }
 )
 
 gulp.task('templates', () =>
@@ -128,9 +122,6 @@ gulp.task('templates', () =>
     }))
     .pipe(rename({
       extname: '.html'
-    }))
-    .pipe(removeCode({
-      production: true
     }))
     .pipe(htmlmin({
       collapseWhitespace: true,

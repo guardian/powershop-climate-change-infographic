@@ -1,0 +1,7 @@
+& {
+  @include fluid-type(font-size, 320px, 1260px, 16px, 20px);
+  background-color: $white;
+  color: $abbey;
+  font-family: Display Sans, sans-serif;
+  line-height: 1.5;
+}

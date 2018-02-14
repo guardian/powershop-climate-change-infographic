@@ -1,6 +1,5 @@
 .c-title {
   @include fluid-type(font-size, 20em, 63em, 1.25em, 1.5em);
-  @include fluid-type(margin-bottom, 320px, 1260px, 32px, 40px);
   font-weight: 700;
   line-height: 1.25;
 
@@ -9,6 +8,10 @@
     display: block;
     font-size: 0.5em;
   }
+}
+
+.c-title--centered {
+  text-align: center;
 }
 
 .c-title--counter {
@@ -29,4 +32,9 @@
     text-align: center;
     width: 1.6666666667em;
   }
+}
+
+.c-title--counter.c-title--centered {
+  justify-content: center;
+  text-align: left;
 }

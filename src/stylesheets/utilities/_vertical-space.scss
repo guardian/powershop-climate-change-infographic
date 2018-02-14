@@ -1,0 +1,11 @@
+.u-vertical-space {
+  @include fluid-type(margin-bottom margin-top, 320px, 1260px, 24px, 30px);
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -7,7 +7,6 @@ const del = require('del')
 const file = require('gulp-file')
 const gulp = require('gulp')
 const htmlmin = require('gulp-htmlmin')
-const npmSass = require('npm-sass')
 const nunjucks = require('gulp-nunjucks')
 const plumber = require('gulp-plumber')
 const rename = require('gulp-rename')
@@ -58,7 +57,10 @@ function s3(cacheControl, keyPrefix) {
 }
 
 gulp.task('deploy', ['build'], () =>
-  gulp.src('dest/**/*')
+  gulp.src([
+    'dest/**/*',
+    '!dest/**/*.map'
+  ])
     .pipe(s3('max-age=31536000', `${path}/${project}/${version}`))
     .on('end', () =>
       gulp.src('config.json')
@@ -102,7 +104,6 @@ gulp.task('stylesheets', () =>
         cdn: cdn
       }))
       .pipe(sass({
-        importer: npmSass.importer,
         outputStyle: 'compressed',
         precision: 10
       }))

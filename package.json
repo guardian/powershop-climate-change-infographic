@@ -18,8 +18,6 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-surge": "^0.1.0",
     "gulp-uglify": "^3.0.0",
-    "mathsass": "^0.10.1",
-    "npm-sass": "^2.2.1",
     "run-sequence": "^2.2.1"
   },
   "dependencies": {

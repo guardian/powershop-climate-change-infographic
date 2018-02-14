@@ -1,8 +1,0 @@
-@function get-tilted-height($angle) {
-  $a: (100% / 1%);
-  $A: (90deg - $angle);
-  $c: ($a / sin($A));
-  $b: sqrt(pow($c, 2) - pow($a, 2));
-
-  @return (abs($b) * 1%);
-}

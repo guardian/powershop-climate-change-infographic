@@ -4,9 +4,13 @@
   margin: -1.5em 0 0 -2em;
 
   @media (min-width: 48em) {
+    align-items: center;
     display: flex;
   }
 }
+
+
+// Media -------------------------------
 
 .c-card__media {
   padding: 1.5em 0 0 2em;
@@ -15,6 +19,9 @@
     flex-basis: 40%;
   }
 }
+
+
+// Content -----------------------------
 
 .c-card__content {
   padding: 1.5em 0 0 2em;

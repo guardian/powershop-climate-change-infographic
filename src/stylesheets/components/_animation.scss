@@ -1,0 +1,47 @@
+// Quote -------------------------------
+
+@keyframes quote {
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+
+.c-quote {
+  .js-on & img {
+    opacity: 0;
+
+    &:first-child {
+      transform: translatex(-100%);
+    }
+
+    &:last-child {
+      transform: translatex(100%);
+    }
+  }
+
+  &.in-viewport img {
+    animation: 1s ease 1 forwards quote;
+
+    &:last-child {
+      animation-delay: 0.25s;
+    }
+  }
+}
+
+
+// Toilet ------------------------------
+
+@keyframes toilet {
+  0% {
+    transform: translatey(-0.5em);
+  }
+
+  100% {
+    transform: translatey(0.5em);
+  }
+}
+
+.c-illustration--toilet img {
+  animation: 1s ease-in-out infinite alternate toilet;
+}

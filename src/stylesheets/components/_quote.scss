@@ -1,0 +1,30 @@
+.c-quote {
+  align-items: center;
+  display: flex;
+  font-size: 1.5em;
+  font-weight: 700;
+  justify-content: space-between;
+  line-height: 1.25;
+  text-align: center;
+
+  @media (max-width: 47.9375em) {
+    flex-wrap: wrap;
+  }
+}
+
+.c-quote__text {
+  @media (max-width: 47.9375em) {
+    order: -1;
+  }
+
+  @media (min-width: 48em) {
+    margin: 0 0.5em;
+  }
+}
+
+.c-quote__image {
+  @include fluid-type(max-width, 20em, 63em, 5em, 7.5em);
+  flex: none;
+  height: 100%;
+  width: 100%;
+}

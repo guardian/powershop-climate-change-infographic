@@ -25,26 +25,60 @@
 }
 
 
-// Angles ------------------------------
+// Spacing -----------------------------
 
 .c-main {
-  .c-section--tilted:nth-child(2) {
-    @include tilted(-10deg, $celery);
+  .c-section:nth-child(1) {
+    @include fluid-type(padding-top, 20em, 63em, 4em, 8em);
+  }
+}
+
+
+// Angles ------------------------------
+
+.c-section--tilted {
+  margin: 17.6326980708% 0;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    left: 0;
+    padding-top: 17.6326980708%;
+    position: absolute;
+    right: 0;
   }
 
-  .c-section--tilted:nth-child(4) {
-    @include tilted(10deg, $jaffa);
+  &::before {
+    bottom: 100%;
   }
 
-  .c-section--tilted:nth-child(6) {
-    @include tilted(-10deg, $celery);
+  &::after {
+    top: 100%;
   }
 
-  .c-section--tilted:nth-child(8) {
-    @include tilted(-10deg, $amaranth);
+  &:nth-child(2) {
+    &::before { background-image: linear-gradient(-10deg, $celery 50%, transparent 50%); }
+    &::after  { background-image: linear-gradient(-10deg, transparent 50%, $celery 50%); }
   }
 
-  .c-section--tilted:nth-child(10) {
-    @include tilted(10deg, $iron);
+  &:nth-child(4) {
+    &::before { background-image: linear-gradient(10deg, $jaffa 50%, transparent 50%); }
+    &::after  { background-image: linear-gradient(10deg, transparent 50%, $jaffa 50%); }
+  }
+
+  &:nth-child(6) {
+    &::before { background-image: linear-gradient(-10deg, $celery 50%, transparent 50%); }
+    &::after  { background-image: linear-gradient(-10deg, transparent 50%, $celery 50%); }
+  }
+
+  &:nth-child(8) {
+    &::before { background-image: linear-gradient(-10deg, $amaranth 50%, transparent 50%); }
+    &::after  { background-image: linear-gradient(-10deg, transparent 50%, $amaranth 50%); }
+  }
+
+  &:nth-child(10) {
+    &::before { background-image: linear-gradient(10deg, $iron 50%, transparent 50%); }
+    &::after  { background-image: linear-gradient(10deg, transparent 50%, $iron 50%); }
   }
 }

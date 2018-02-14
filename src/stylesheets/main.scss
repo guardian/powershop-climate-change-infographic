@@ -1,6 +1,5 @@
 body { margin: 0; }
 
-@import "mathsass";
 
 .s-interactive.s-interactive {
 
@@ -12,12 +11,10 @@ body { margin: 0; }
   // Tools -----------------------------
 
   // Functions
-  @import "tools/get-tilted-height";
   @import "tools/strip-unit";
 
   // Mixins
   @import "tools/fluid-type";
-  @import "tools/tilted";
 
 
   // Generic ---------------------------
@@ -51,7 +48,10 @@ body { margin: 0; }
   @import "components/main";
 
   // Widgets
+  @import "components/animation";
   @import "components/card";
+  @import "components/illustration";
+  @import "components/quote";
   @import "components/title";
 
 

@@ -1,6 +1,8 @@
 .s-entry-content {
   hyphens: auto;
+  position: relative;
   word-wrap: break-word;
+  z-index: 2;
 
   small {
     display: block;
@@ -21,6 +23,15 @@
   }
 }
 
+// Alignment ---------------------------
+
 .s-entry-content--centered {
   text-align: center;
+}
+
+
+// Width -------------------------------
+
+.s-entry-content--3\/4 {
+  width: 75%;
 }

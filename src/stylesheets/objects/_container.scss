@@ -3,4 +3,12 @@
   margin-right: auto;
   max-width: 960px;
   width: 93.75%;
+
+  .o-container {
+    width: auto;
+  }
+}
+
+.o-container--narrow {
+  max-width: 720px;
 }

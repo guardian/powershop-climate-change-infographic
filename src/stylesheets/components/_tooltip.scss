@@ -1,0 +1,48 @@
+.c-tooltip {
+  margin: -1.125em 0 0 -1.125em;
+  position: absolute;
+}
+
+.c-illustration--globe .c-tooltip {
+  left: 50%;
+  top: 0;
+}
+
+.c-illustration--contributions .c-tooltip {
+  left: 25.7%;
+  top: 72.76%;
+}
+
+.c-tooltip__icon {
+  background-color: $jungle;
+  border-radius: 50%;
+  color: $white;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+  width: 1.5em;
+}
+
+.c-tooltip__content {
+  background-color: $white;
+  border-radius: 0.5em;
+  border: $jungle solid 1px;
+  box-shadow: 0 0.5em rgba($black, 0.1);
+  font-size: 0.75em;
+  left: 50%;
+  margin-top: 0.5em;
+  opacity: 0;
+  padding: 1em 1.25em;
+  position: absolute;
+  transform: translatex(-50%);
+  transition: 0.25s opacity ease, 0.25s visibility ease;
+  visibility: hidden;
+  width: 280px;
+}
+
+.c-tooltip:focus .c-tooltip__content,
+.c-tooltip:active .c-tooltip__content {
+  opacity: 1;
+  visibility: visible;
+}

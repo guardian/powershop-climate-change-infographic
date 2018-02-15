@@ -22,6 +22,7 @@
 
 .c-section--jaffa {
   background-color: $jaffa;
+  color: $white;
 }
 
 
@@ -30,6 +31,10 @@
 .c-main {
   .c-section:nth-child(1) {
     @include fluid-type(padding-top, 20em, 63em, 4em, 8em);
+  }
+
+  .c-section:nth-child(2) {
+    @include fluid-type(padding-bottom, 20em, 63em, 2em, 5em);
   }
 }
 

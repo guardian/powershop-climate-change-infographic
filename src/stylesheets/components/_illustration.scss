@@ -1,40 +1,87 @@
 .c-illustration {
+  display: flex;
+  justify-content: center;
   position: relative;
-  text-align: center;
-  z-index: 1;
+  // z-index: 2;
+
+  img {
+    height: 100%;
+    width: 100%;
+
+    &:nth-child(n+2) {
+      position: absolute;
+    }
+  }
 }
+
 
 .c-illustration--people-government {
   @include fluid-type(margin-bottom, 20em, 63em, -4em, -8em);
 }
 
-.c-illustration--house img {
-  width: 20em;
+.c-illustration--house {
+  img {
+    width: 20em;
+
+    &:last-child {
+      z-index: -1;
+    }
+  }
 }
 
-.c-illustration--human-chain img {
-  width: 20em;
+.c-illustration--human-chain {
+  img {
+    width: 20em;
+  }
 }
 
 .c-illustration--australia {
   @include fluid-type(margin-bottom, 20em, 63em, -4.5em, -7.5em);
-  @include fluid-type(margin-top, 20em, 63em, -6em, -13.5em);
+  @include fluid-type(margin-top, 20em, 63em, -6em, -15em);
+}
+
+.c-illustration--battery {
+  img {
+    width: 20em;
+
+    &:nth-child(n+2) {
+      z-index: -1;
+    }
+  }
 }
 
 .c-illustration--power-grid {
-  @include fluid-type(margin-bottom, 20em, 63em, -6em, -13.5em);
+  @include fluid-type(margin-bottom, 20em, 63em, -6em, -12em);
 }
 
-.c-illustration--toilet img {
-  width: 12.5em;
+.c-illustration--piggy-bank {
+  @include fluid-type(margin-bottom, 20em, 63em, -6em, -8em);
+
+  img {
+    width: 20em;
+  }
 }
 
-.c-illustration--checklist img {
-  @include fluid-type(width, 20em, 63em, 20em, 30em);
+.c-illustration--checklist {
+  img {
+    @include fluid-type(width, 20em, 63em, 20em, 30em);
+  }
 }
 
-.c-illustration--people img {
-  width: 20em;
+.c-illustration--toilet {
+  img {
+    width: 12.5em;
+  }
+}
+
+.c-illustration--people {
+  img {
+    width: 20em;
+
+    &:nth-child(n+2) {
+      z-index: -1;
+    }
+  }
 }
 
 .c-illustration--globe {
@@ -42,5 +89,19 @@
 
   img {
     width: 20em;
+
+    &:last-child {
+      z-index: -1;
+    }
   }
 }
+
+// contributions
+
+
+/*
+
+@include fluid-type(margin-bottom, 20em, 63em, -0em, -0em);
+@include fluid-type(margin-top, 20em, 63em, -0em, -0em);
+
+*/

@@ -6,6 +6,7 @@ const concat = require('gulp-concat')
 const del = require('del')
 const file = require('gulp-file')
 const gulp = require('gulp')
+const gulpIf = require('gulp-if')
 const htmlmin = require('gulp-htmlmin')
 const nunjucks = require('gulp-nunjucks')
 const plumber = require('gulp-plumber')
@@ -16,6 +17,7 @@ const sass = require('gulp-sass')
 const sassVars = require('gulp-sass-vars')
 const sourcemaps = require('gulp-sourcemaps')
 const surge = require('gulp-surge')
+const tinypng = require('gulp-tinypng')
 const uglify = require('gulp-uglify')
 
 let domain = path = project = version = cdn = null
@@ -72,12 +74,14 @@ gulp.task('deploy', ['build'], () =>
 
 gulp.task('images', () =>
   gulp.src('src/images/*')
+    .pipe(gulpIf(process.env.NODE_ENV === 'production', tinypng('hVF5cDJ6l3HWdKS6-Unkd5mb0RUuJcVg')))
     .pipe(gulp.dest('dest/images'))
 )
 
 gulp.task('scripts', () =>
   gulp.src([
     'node_modules/when-in-viewport/dist/whenInViewport.js',
+    'node_modules/what-input/dist/what-input.js',
     'src/scripts/main.js'
   ])
     .pipe(plumber())

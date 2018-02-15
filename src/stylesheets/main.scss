@@ -1,4 +1,18 @@
-body { margin: 0; }
+body {
+  margin: 0;
+}
+
+.c-card__media {
+  background-clip: content-box;
+  background-color: rgba(black, 0.025);
+}
+
+.c-illustration,
+.c-illustration img {
+  background-color: rgba(black, 0.025);
+}
+
+
 
 
 .s-interactive.s-interactive {
@@ -23,6 +37,7 @@ body { margin: 0; }
   @import "generic/font-smoothing";
   @import "generic/reset";
   @import "generic/web-fonts";
+  @import "generic/what-input";
 
 
   // Elements --------------------------
@@ -53,6 +68,7 @@ body { margin: 0; }
   @import "components/illustration";
   @import "components/quote";
   @import "components/title";
+  @import "components/tooltip";
 
 
   // Scopes ----------------------------

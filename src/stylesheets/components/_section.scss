@@ -44,6 +44,7 @@
 .c-section--tilted {
   margin: 17.6326980708% 0;
   position: relative;
+  z-index: 0;
 
   &::before,
   &::after {
@@ -52,6 +53,7 @@
     padding-top: 17.6326980708%;
     position: absolute;
     right: 0;
+    z-index: -1;
   }
 
   &::before {

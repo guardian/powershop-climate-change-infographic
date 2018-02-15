@@ -3,6 +3,11 @@
   position: absolute;
 }
 
+.c-illustration--institutions .c-tooltip {
+  left: 37.5%;
+  top: 67%;
+}
+
 .c-illustration--globe .c-tooltip {
   left: 50%;
   top: 0;
@@ -39,6 +44,18 @@
   transition: 0.25s opacity ease, 0.25s visibility ease;
   visibility: hidden;
   width: 280px;
+}
+
+.c-illustration--institutions .c-tooltip__content {
+  @media (max-width: 37.4375em) {
+    left: 16.25vw;
+  }
+}
+
+.c-illustration--contributions .c-tooltip__content {
+  @media (max-width: 37.4375em) {
+    left: 26.25vw;
+  }
 }
 
 .c-tooltip:focus .c-tooltip__content,

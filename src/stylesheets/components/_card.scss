@@ -1,5 +1,7 @@
 .c-card {}
 
+.c-card--swap {}
+
 .c-card__container {
   margin: -1.5em 0 0 -2em;
 
@@ -20,6 +22,12 @@
   }
 }
 
+.c-card--swap .c-card__media {
+  @media (min-width: 48em) {
+    flex-basis: 60%;
+  }
+}
+
 
 // Content -----------------------------
 
@@ -28,5 +36,11 @@
 
   @media (min-width: 48em) {
     flex-basis: 60%;
+  }
+}
+
+.c-card--swap .c-card__content {
+  @media (min-width: 48em) {
+    flex-basis: 40%;
   }
 }

@@ -2,9 +2,10 @@
   display: flex;
   justify-content: center;
   position: relative;
-  // z-index: 2;
+  z-index: 0;
 
-  img {
+  img,
+  svg {
     height: 100%;
     width: 100%;
 
@@ -14,7 +15,6 @@
   }
 }
 
-
 .c-illustration--people-government {
   @include fluid-type(margin-bottom, 20em, 63em, -4em, -8em);
 }
@@ -23,7 +23,7 @@
   img {
     width: 20em;
 
-    &:last-child {
+    &:nth-child(2) {
       z-index: -1;
     }
   }
@@ -51,7 +51,8 @@
 }
 
 .c-illustration--power-grid {
-  @include fluid-type(margin-bottom, 20em, 63em, -6em, -12em);
+  @include fluid-type(margin-bottom, 20em, 63em, -6em, -14em);
+  z-index: 1;
 }
 
 .c-illustration--piggy-bank {
@@ -74,7 +75,20 @@
   }
 }
 
+.c-illustration--community {
+  img {
+    width: 20em;
+  }
+}
+
+.c-illustration--institutions {
+  margin-bottom: -6em;
+  z-index: 1;
+}
+
 .c-illustration--people {
+  @include fluid-type(margin-top, 20em, 63em, 0em, -4em);
+
   img {
     width: 20em;
 
@@ -90,18 +104,16 @@
   img {
     width: 20em;
 
-    &:last-child {
+    &:nth-child(2) {
       z-index: -1;
     }
   }
 }
 
-// contributions
+.c-illustration--contributions {
+  z-index: 1;
 
-
-/*
-
-@include fluid-type(margin-bottom, 20em, 63em, -0em, -0em);
-@include fluid-type(margin-top, 20em, 63em, -0em, -0em);
-
-*/
+  svg {
+    z-index: -1;
+  }
+}

@@ -72,8 +72,15 @@ gulp.task('deploy', ['build'], () =>
     )
 )
 
-gulp.task('images', () =>
-  gulp.src('src/images/*')
+gulp.task('images', ['images:gif', 'images:png'])
+
+gulp.task('images:gif', () =>
+  gulp.src('src/images/*.gif')
+    .pipe(gulp.dest('dest/images'))
+)
+
+gulp.task('images:png', () =>
+  gulp.src('src/images/*.png')
     .pipe(gulpIf(process.env.NODE_ENV === 'production', tinypng('hVF5cDJ6l3HWdKS6-Unkd5mb0RUuJcVg')))
     .pipe(gulp.dest('dest/images'))
 )

@@ -17,10 +17,6 @@
     &:nth-child(n+2) {
       animation: 1s ease 1 forwards battery;
     }
-
-    &:last-child {
-      animation-delay: 0.25s;
-    }
   }
 }
 
@@ -52,6 +48,29 @@
     &:nth-child(4) {
       animation-delay: 0.75s;
     }
+  }
+}
+
+
+// Contributions -----------------------
+
+@keyframes contributions {
+  100% {
+    stroke-dashoffset: -2106.548583984375;
+  }
+}
+
+.c-illustration--contributions svg g g:last-child path {
+  animation: 4s linear infinite contributions;
+
+  &:nth-child(2) {
+    animation-delay: -1s;
+    animation-duration: 5s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: -2s;
+    animation-duration: 6s;
   }
 }
 
@@ -91,6 +110,19 @@
   &:last-child {
     transform: translatey(0.5em);
   }
+}
+
+
+// Human chain -------------------------
+
+@keyframes human-chain {
+  100% {
+    stroke-dashoffset: -620.7127685546875;
+  }
+}
+
+.c-illustration--human-chain svg path {
+  animation: 8s linear infinite human-chain;
 }
 
 

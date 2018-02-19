@@ -1,3 +1,4 @@
+<!-- removeIf(production) -->
 <!DOCTYPE html>
 <html class="js-off" lang="en">
   <head>
@@ -8,9 +9,12 @@
     <script>document.documentElement.className=document.documentElement.className.replace('js-off','js-on');</script>
   </head>
   <body>
+<!-- endRemoveIf(production) -->
     <div class="o-body-wrap s-interactive">
       {% block regions %}{% endblock %}
     </div>
+<!-- removeIf(production) -->
     <script src="main.js"></script>
   </body>
 </html>
+<!-- endRemoveIf(production) -->

@@ -10,6 +10,7 @@ const gulpIf = require('gulp-if')
 const htmlmin = require('gulp-htmlmin')
 const nunjucks = require('gulp-nunjucks')
 const plumber = require('gulp-plumber')
+const removeCode = require('gulp-remove-code')
 const rename = require('gulp-rename')
 const runSequence = require('run-sequence')
 const s3Upload = require('gulp-s3-upload')
@@ -129,11 +130,14 @@ gulp.task('stylesheets', () =>
 gulp.task('templates', () =>
   gulp.src('src/templates/*.njk')
     .pipe(plumber())
+    .pipe(rename({
+      extname: '.html'
+    }))
     .pipe(nunjucks.compile({
       cdn: cdn
     }))
-    .pipe(rename({
-      extname: '.html'
+    .pipe(removeCode({
+      production: true
     }))
     .pipe(htmlmin({
       collapseWhitespace: true,

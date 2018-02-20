@@ -136,9 +136,7 @@ gulp.task('templates', () =>
     .pipe(nunjucks.compile({
       cdn: cdn
     }))
-    .pipe(removeCode({
-      production: true
-    }))
+    .pipe(gulpIf(process.env.NODE_ENV === 'production', removeCode({ production: true })))
     .pipe(htmlmin({
       collapseWhitespace: true,
       removeComments: true

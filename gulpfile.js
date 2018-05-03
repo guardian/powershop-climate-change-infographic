@@ -145,6 +145,10 @@ gulp.task('templates', () =>
     .on('end', browserSync.reload)
 )
 
+gulp.task('url', () =>
+  console.log('\nAtom URL: https://internal.content.guardianapis.com/atom/interactive/interactives/' + project + '\n')
+)
+
 gulp.task('watch', ['browser-sync'], () => {
   gulp.watch('src/images/*', ['images'])
   gulp.watch('src/scripts/**/*.js', ['scripts'])

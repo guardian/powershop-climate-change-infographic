@@ -29,7 +29,7 @@
   },
   "scripts": {
     "build": "gulp build",
-    "deploy": "NODE_ENV=production gulp deploy",
+    "deploy": "NODE_ENV=production gulp deploy && NODE_ENV=production gulp url",
     "stage": "gulp stage",
     "start": "gulp"
   }
